@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+
+body, html{
+    padding: 0;
+    margin: 0;
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+.color-ligth-violet{
+    color: hsl(277, 64%, 61%);
+}
+
+.card{
+    width: 87%;
+    margin: auto;
+    border-radius: 10px;
+    background:  hsl(244, 38%, 16%);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.card figure{
+    background: url(images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    position: relative;
+}
+.card figure:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(100 11 156 / 55%);
+}
+.card section{
+    padding: 0px 2.3rem;
+}
+.card section{
+    margin-bottom: 2.5rem;
+}
+.card section.content h1{
+    font-size: 1.8rem;
+    
+    color: hsl(0, 0%, 100%);
+}
+.card section.content .main-paragraph{
+    color:hsla(0, 0%, 100%, 0.75);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.card section.stats article{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.card section.stats article .number{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+}
+.card section.stats article .category{
+    color:hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    
+}
+
+
+@media (min-width: 1440px){
+    .card{
+        width: 77%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+    .card figure{
+        background-image: url(images/image-header-desktop.jpg);
+        background-size: cover;
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 3; 
+    }
+    .card figure img{
+        display: none;
+    }
+    .card section.content{
+        grid-column: 1;
+        grid-row: 1;
+        padding-top: 2.5rem;
+        padding-left: 4.5rem;
+        padding-right: 8rem;
+        
+    }
+    .card section.content h1{
+        font-size: 2.33rem;
+
+    }
+    
+    .card section.stats{
+        grid-column: 1;
+        grid-row: 2;
+        padding-left: 4.5rem;
+        padding-right: 9rem;
+        padding-bottom: 2rem;
+    }
+    .card section.stats{
+        display: flex;
+        flex-direction: row;
+    }
+    .card section.stats article {
+        flex-direction: column;
+        margin: auto;
+    }
+    .card section.stats article:first-child {
+        margin-left: 0;
+    }
+    .card section.stats article:last-child {
+        margin-right: 0;
+    }
+    .card section.stats article .number {
+        margin-bottom: 0.4rem;
+    }
+}
